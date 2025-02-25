@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <font face="verdana">
+        <form action="">
+            <h3 style="margin-bottom: 0;">Basic Info</h3>
+            <hr style="margin-top: 0; margin-bottom: 10px;">
+            <label for="id">Employee ID</label>
+            <input type="text" id="id" name="id">
+            <br>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname">
+            <br>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" value="Anne">
+            <br>
+            <label for="gender">Gender</label>
+            <div>
+                <input type="radio" value="male" name="role">Male <br>
+                <input type="radio" value="female" name="role">Female <br>
+                <input type="radio" value="xxx" name="role">XXX <br>
+                <input type="radio" value="yyy" name="role">YYY <br>
+            </div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="Sales Representative">
+            <br>
+            <label for="suffix">Suffix</label>
+            <input type="text" id="suffix" name="suffix" value="Ms.">
+            <br>
+            <label for="birthdate">Birthdate</label>
+            <input type="datetime" id="birthdate" name="birthdate" value="1969-07-02 00:00:00">
+            <br>
+            <label for="hiredate">HireDate</label>
+            <input type="datetime" id="hiredate" name="hiredate" value="1994-11-15 00:00:00">
+            <br>
+            <label for="ssn">SSN # (if applicable)</label>
+            <input type="text" id="ssn" name="ssn">
+            <br>
+            <label for="reports">Reports To</label>
+            <select name="reports" id="reports">
+                <option value="buchanan">Buchanan</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="danang">Đà Nẵng</option>
+            </select>
+            <!-- contact -->
+            <h3 style="margin-bottom: 0;">Basic Info</h3>
+            <hr style="margin-top: 0; margin-bottom: 10px;">
+
+            <br>
+            <input type="submit">
+        </form>
+    </font>
+
+</body>
+</html>
