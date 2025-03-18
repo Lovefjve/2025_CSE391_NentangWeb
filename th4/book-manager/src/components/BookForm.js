@@ -76,7 +76,7 @@ function BookForm({ onAdd, onUpdate, editingBook }) {
           class="form-control"  id='floatingInput'
         /> 
       </div> 
-      <button type="submit" class="btn btn-primary" > 
+      <button type="submit" class="btn btn-primary" style={{ padding: '10px', marginTop: '17px', backgroundColor:'green'}}> 
         {editingBook ? 'Cập nhật' : 'Thêm sách'} 
       </button> 
     </form> 
