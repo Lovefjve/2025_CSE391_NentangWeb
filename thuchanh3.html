@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            margin-left: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn-add {
+            background-color: #ddd;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        .task-item.completed {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .btn-delete {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List JS</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Nhập công việc...">
+            <button class="btn-add" onclick="addTask()">Thêm</button>
+        </div>
+        <ul class="task-list" id="taskList">
+            <li class="task-item completed">Điểm danh <button class="btn-delete" onclick="deleteTask(this)">Xóa</button></li>
+            <li class="task-item">Làm ví dụ 1 <button class="btn-delete" onclick="deleteTask(this)">Xóa</button></li>
+            <li class="task-item">Làm ví dụ 2 <button class="btn-delete" onclick="deleteTask(this)">Xóa</button></li>
+        </ul>
+    </div>
+    <script>
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let taskText = input.value.trim();
+            if (taskText === "") {
+                alert("Vui lòng nhập công việc!");
+                return;
+            }
+            let li = document.createElement("li");
+            li.className = "task-item";
+            li.innerHTML = `${taskText} <button class='btn-delete' onclick='deleteTask(this)'>Xóa</button>`;
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+        }
+        function deleteTask(button) {
+            button.parentElement.remove();
+        }
+    </script>
+</body>
+</html>
